@@ -1,3 +1,6 @@
+// created by Genesis Clarke & Briah Davis 
+// CS340 Project -- Cordle 
+
 'use strict';
 
 // create a file stream
@@ -14,8 +17,9 @@ let score = 0;
 // exception handling for opening a file
     try {
       // read in file
-      //var wordList = fs.readFileSync('c:/Users/Briah/OneDrive/Documents/JavaScriptPL/words.txt').toString().split("\r\n");
-      var wordList = ["world", "april", "these", "march", "clone"]
+      // var wordList = fs.readFileSync('c:/Users/Briah/OneDrive/Documents/JavaScriptPL/words.txt').toString().split("\r\n");
+      // short list for demo purposes
+      var wordList = ["world", "april", "thief", "march", "clone"]
       var index = Math.floor(Math.random() * wordList.length);
       // find and store a random word from list
 	    computerWord = wordList[index];
@@ -105,13 +109,13 @@ function compare(){
   let index = NUM_GUESSES - guessRemaining;
   let row = document.getElementsByClassName("letter-row")[index];
 
-  if (!userGuess.length == 5){
-    alert("ERROR: Not enough letters");
+  if (userGuess.length != 5){
+    alert("ERROR: Not enough letters!");
     return;
 
   }
   if (!wordList.includes(userGuess)){
-    alert("ERROR: Word is not in list");
+    alert("ERROR: Word is not in list!");
     return;
   }
 
@@ -153,6 +157,7 @@ function compare(){
     }
   }
 
+
   gameBoard();
 
   // // reassign everything 
@@ -174,4 +179,3 @@ function compare(){
   //   }
   //   gameBoard();
   // }
-
